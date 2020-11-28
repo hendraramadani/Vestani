@@ -8,17 +8,12 @@ import {
   Dimensions,
   StatusBar,
   Platform,
-  ProgressBar
 } from 'react-native';
-import * as Progress from 'react-native-progress';
-import HeaderImageScrollView, {
-  TriggeringView,
-} from 'react-native-image-header-scroll-view';
+
+import HeaderImageScrollView, {TriggeringView,} from 'react-native-image-header-scroll-view';
 
 import * as Animatable from 'react-native-animatable';
-import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import { TextInput } from 'react-native-paper';
 
 const MIN_HEIGHT = Platform.OS === 'ios' ? 90 : 55;
 const MAX_HEIGHT = 350;

@@ -7,24 +7,19 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import HomeScreen from './HomeScreen';
-import HomeScreen2 from './HomeScreen2';
-import NotificationScreen from './NotificationScreen';
-import NotificationScreenSelesai from './NotificationScreenSelesai';
-import ExploreScreen from './ExploreScreen';
+import NotificationScreen from './InvestasiSekarang';
+import NotificationScreenSelesai from './InvestasiSelesai';
 import ProfileScreen from './ProfileScreen';
-import MapTestScreen from './MapTestScreen';
 import EditProfileScreen from './EditProfileScreen';
 
 import {useTheme, Avatar} from 'react-native-paper';
 import {View} from 'react-native-animatable';
-import {TouchableOpacity} from 'react-native-gesture-handler';
 import CardListScreen from './CardListScreen';
 import CardItemDetails from './CardItemDetails';
 import AmbilKeuntungan from './AmbilKeuntungan';
 import Vestpay from './Vestpay';
 
 const HomeStack = createStackNavigator();
-const HomeStack2 = createStackNavigator();
 const NotificationStack = createStackNavigator();
 const NotificationStackSelesai = createStackNavigator();
 const ProfileStack = createStackNavigator();
@@ -44,17 +39,6 @@ const MainTabScreen = () => (
         ),
       }}
     />
-    {/* <Tab.Screen
-      name="Pengepul"
-      component={HomeStackScreen2}
-      options={{
-        tabBarLabel: 'Pengepul',
-        tabBarColor: '#255004',
-        tabBarIcon: ({color="#9F9F9F"}) => (
-          <MaterialCommunityIcons name="home-account" color={color} size={26} />
-        ),
-      }}
-    /> */}
     <Tab.Screen
       name="Investasi1"
       component={NotificationStackScreen}
@@ -113,17 +97,7 @@ const HomeStackScreen = ({navigation}) => {
         component={HomeScreen}
         options={{
           title: 'Petani',
-          // headerLeft: () => (
-          //   <View style={{marginLeft: 10}}>
-          //     <Icon.Button
-          //       name="ios-menu"
-          //       size={25}
-          //       color={colors.text}
-          //       backgroundColor={colors.background}
-          //       onPress={() => navigation.openDrawer()}
-          //     />
-          //   </View>
-          // ),
+
           headerRight: () => (
             <View style={{flexDirection: 'row', marginRight: 10}}>
               <Icon.Button
@@ -133,19 +107,6 @@ const HomeStackScreen = ({navigation}) => {
                 backgroundColor={colors.background}
                 onPress={() => {}}
               />
-              {/* <TouchableOpacity
-                style={{paddingHorizontal: 10, marginTop: 5}}
-                onPress={() => {
-                  navigation.navigate('Profile');
-                }}>
-                <Avatar.Image
-                  source={{
-                    uri:
-                      'https://api.adorable.io/avatars/80/abott@adorable.png',
-                  }}
-                  size={30}
-                />
-              </TouchableOpacity> */}
             </View>
           ),
         }}
@@ -173,85 +134,7 @@ const HomeStackScreen = ({navigation}) => {
   );
 };
 
-// const HomeStackScreen2 = ({navigation}) => {
-//   const {colors} = useTheme();
-//   return (
-//     <HomeStack2.Navigator
-//       screenOptions={{
-//         headerStyle: {
-//           backgroundColor: colors.background,
-//           shadowColor: colors.background, // iOS
-//           elevation: 0, // Android
-//         },
-//         headerTintColor: colors.text,
-//         headerTitleStyle: {
-//           fontWeight: 'bold',
-//         },
-//       }}>
-//       <HomeStack2.Screen
-//         name="Home"
-//         component={HomeScreen2}
-//         options={{
-//           title: 'Pengepul',
-//           // headerLeft: () => (
-//           //   <View style={{marginLeft: 10}}>
-//           //     <Icon.Button
-//           //       name="ios-menu"
-//           //       size={25}
-//           //       color={colors.text}
-//           //       backgroundColor={colors.background}
-//           //       onPress={() => navigation.openDrawer()}
-//           //     />
-//           //   </View>
-//           // ),
-//           headerRight: () => (
-//             <View style={{flexDirection: 'row', marginRight: 10}}>
-//               <Icon.Button
-//                 name="ios-search"
-//                 size={25}
-//                 color={colors.text}
-//                 backgroundColor={colors.background}
-//                 onPress={() => {}}
-//               />
-//               {/* <TouchableOpacity
-//                 style={{paddingHorizontal: 10, marginTop: 5}}
-//                 onPress={() => {
-//                   navigation.navigate('Profile');
-//                 }}>
-//                 <Avatar.Image
-//                   source={{
-//                     uri:
-//                       'https://api.adorable.io/avatars/80/abott@adorable.png',
-//                   }}
-//                   size={30}
-//                 />
-//               </TouchableOpacity> */}
-//             </View>
-//           ),
-//         }}
-//       />
-//       <HomeStack2.Screen 
-//         name="CardListScreen"
-//         component={CardListScreen}
-//         options={({route}) => ({
-//           title: route.params.title,
-//           headerBackTitleVisible: false
-//         })}
-//       />
-//       <HomeStack2.Screen 
-//         name="CardItemDetails"
-//         component={CardItemDetails}
-//         options={({route}) => ({
-//           // title: route.params.title,
-//           headerBackTitleVisible: false,
-//           headerTitle: false,
-//           headerTransparent: true,
-//           headerTintColor: '#fff'
-//         })}
-//       />
-//     </HomeStack2.Navigator>
-//   );
-// };
+
 
 const NotificationStackScreen = ({navigation}) => {
   const {colors} = useTheme();
@@ -270,17 +153,7 @@ const NotificationStackScreen = ({navigation}) => {
         name="Investasi Sekarang"
         component={NotificationScreen}
         options={{
-          // headerLeft: () => (
-          //   <View style={{marginLeft: 10}}>
-          //     <Icon.Button
-          //       name="ios-menu"
-          //       size={25}
-          //       backgroundColor={colors.background}
-          //       color={colors.text}
-          //       onPress={() => navigation.openDrawer()}
-          //     />
-          //   </View>
-          // ),
+
         }}
       />
   </NotificationStack.Navigator>
@@ -304,17 +177,7 @@ const NotificationStackScreenSelesai = ({navigation}) => {
         name="Investasi Selesai"
         component={NotificationScreenSelesai}
         options={{
-          // headerLeft: () => (
-          //   <View style={{marginLeft: 10}}>
-          //     <Icon.Button
-          //       name="ios-menu"
-          //       size={25}
-          //       backgroundColor={colors.background}
-          //       color={colors.text}
-          //       onPress={() => navigation.openDrawer()}
-          //     />
-          //   </View>
-          // ),
+
         }}
       />
       <NotificationStackSelesai.Screen
@@ -323,19 +186,7 @@ const NotificationStackScreenSelesai = ({navigation}) => {
         options={{
           title: 'Ambil Keuntungan',
         }}
-        // options={{
-        //   // headerLeft: () => (
-        //   //   <View style={{marginLeft: 10}}>
-        //   //     <Icon.Button
-        //   //       name="ios-menu"
-        //   //       size={25}
-        //   //       backgroundColor={colors.background}
-        //   //       color={colors.text}
-        //   //       onPress={() => navigation.openDrawer()}
-        //   //     />
-        //   //   </View>
-        //   // ),
-        // }}
+
       />
   </NotificationStackSelesai.Navigator>
   );
@@ -362,17 +213,6 @@ const ProfileStackScreen = ({navigation}) => {
         component={ProfileScreen}
         options={{
           title: 'Profil',
-          // headerLeft: () => (
-          //   <View style={{marginLeft: 10}}>
-          //     <Icon.Button
-          //       name="ios-menu"
-          //       size={25}
-          //       backgroundColor={colors.background}
-          //       color={colors.text}
-          //       onPress={() => navigation.openDrawer()}
-          //     />
-          //   </View>
-          // ),
           headerRight: () => (
             <View style={{marginRight: 10}}>
               <MaterialCommunityIcons.Button
