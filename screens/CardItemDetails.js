@@ -136,20 +136,6 @@ const CardItemDetails = ({route}) => {
           
         </View>
 
-        
-
-        {/* <View style={styles.section}>
-          <Text style={{marginBottom:8,fontSize:15,fontWeight:'bold'}}>Kategori</Text>
-          <View style={styles.categories}>
-            {itemData.categories.map((category, index) => (
-              <View style={styles.categoryContainer} key={index}>
-                <FontAwesome name="tag" size={16} color="#fff" />
-                <Text style={styles.category}>{category}</Text>
-              </View>
-            ))}
-          </View>
-        </View> */}
-
         <View style={[styles.section, {height: 320}]}>
         <Text style={{marginBottom:15,fontSize:15,fontWeight:'bold'}}>Lokasi</Text>
           <MapView

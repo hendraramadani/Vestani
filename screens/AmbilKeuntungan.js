@@ -114,21 +114,6 @@ const AmbilKeuntungan = ({route}) => {
           
         </View>
 
-        
-
-        {/* <View style={styles.section}>
-          <Text style={{marginBottom:8,fontSize:15,fontWeight:'bold'}}>Kategori</Text>
-          <View style={styles.categories}>
-            {itemData.categories.map((category, index) => (
-              <View style={styles.categoryContainer} key={index}>
-                <FontAwesome name="tag" size={16} color="#fff" />
-                <Text style={styles.category}>{category}</Text>
-              </View>
-            ))}
-          </View>
-        </View> */}
-
-
         <View style={{flexDirection: 'row', margin:10}}>
               <TouchableOpacity style={{backgroundColor: '#3A915A', width:'100%', borderRadius: 3, height: 40}}>
                 <View style={{width:'100%',height:'100%',flexDirection:'column',justifyContent:'center'}}>

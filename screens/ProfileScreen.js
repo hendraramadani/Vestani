@@ -22,7 +22,6 @@ const ProfileScreen = ({navigation}) => {
     const shareOptions = {
       message: 'Order your next meal from FoodFinder App. I\'ve already ordered more than 10 meals on it.',
       url: files.appLogo,
-      // urls: [files.image1, files.image2]
     }
 
     try {
@@ -56,18 +55,6 @@ const ProfileScreen = ({navigation}) => {
           </View>
         </View>
       </View>
-
-      {/* <View style={styles.userInfoSection}>
-        <View style={styles.row}>
-          <Icon name="map-marker-radius" color="#777777" size={20}/>
-          <Text style={{color:"#777777", marginLeft: 20}}>Jombang , Indonesia</Text>
-        </View>
-        <View style={styles.row}>
-          <Icon name="email" color="#777777" size={20}/>
-          <Text style={{color:"#777777", marginLeft: 20}}>dwiprasetya@gmail.com</Text>
-        </View>
-      </View> */}
-
           <View style={{flexDirection:'row', justifyContent:'space-between'}}>
             <Text style={{fontSize: 14}}>Total investasi</Text>
             <Text style={{fontSize: 14}}>Jumlah Subjek Investasi</Text>
@@ -89,9 +76,7 @@ const ProfileScreen = ({navigation}) => {
                   <Text style={{color:'#3A915A'}}>Details</Text>
               </TouchableOpacity>
             </View>
-
           </View>
-
           </View>
 
           <View style={{borderBottomColor: '#dddddd',borderBottomWidth: 1,borderTopColor: '#dddddd',borderTopWidth: 1,marginTop:15}}>
@@ -111,43 +96,9 @@ const ProfileScreen = ({navigation}) => {
 
           </View>
 
-
-
-          <View style={{backgroundColor:'#dddddd', height:10}}></View>
+      <View style={{backgroundColor:'#dddddd', height:10}}></View>
         
-        {/* <View style={{marginHorizontal:20,marginTop: 20}}>
-          <View>
-              <Text style={{fontSize: 16,fontWeight:'bold'}}>Hasil Panen</Text>
-            </View>
-            <View style={{flexDirection:'row', justifyContent:'space-between', marginHorizontal: 50,paddingTop:10}}>
-            <TouchableOpacity>
-                <View style={{flexDirection: 'column',alignItems:'center'}}>
-                <Icon name='boombox' size={60} color='#3A915A'/>
-                <Text> Dikemas</Text>
-              </View>
-              </TouchableOpacity>
-
-              <TouchableOpacity>
-                <View style={{flexDirection: 'column',alignItems:'center'}}>
-                <Icon name='boombox' size={60} color='#3A915A'/>
-                <Text> Dikirim</Text>
-              </View>
-              </TouchableOpacity>
-
-              <TouchableOpacity>
-                <View style={{flexDirection: 'column',alignItems:'center'}}>
-                <Icon name='boombox' size={60} color='#3A915A'/>
-                <Text> Selesai</Text>
-              </View>
-              </TouchableOpacity>
-
-            </View>
-
-        </View> */}
-
-
       <View style={styles.menuWrapper}>
-
         <TouchableRipple onPress={() => {}}>
           <View style={styles.menuItem}>
             <Icon name="settings" color="#9F9F9F" size={25}/>

@@ -20,7 +20,6 @@ const ProfileScreen = () => {
     const shareOptions = {
       message: 'Order your next meal from FoodFinder App. I\'ve already ordered more than 10 meals on it.',
       url: files.appLogo,
-      // urls: [files.image1, files.image2]
     }
 
     try {
@@ -183,26 +182,8 @@ const ProfileScreen = () => {
               <Text style={{fontWeight:'bold',fontSize:14}}>Rp11.630.000</Text>
             </View>
           </TouchableOpacity>
-
-          
-
-          
-          
-
-
         </View>
-      
-      
-
       </View>
-
-
-
-
-
-
-
-
     </SafeAreaView>
   );
 };

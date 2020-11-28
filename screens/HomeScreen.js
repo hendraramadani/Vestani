@@ -7,18 +7,11 @@ import {
   StatusBar,
   FlatList,
   SafeAreaView,
-  TouchableOpacity,
   ScrollView,
-  LogBox
 } from 'react-native';
 import {useTheme} from '@react-navigation/native';
 
 import Swiper from 'react-native-swiper';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Fontisto from 'react-native-vector-icons/Fontisto';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import StarRating from '../components/StarRating';
 import {data} from '../model/data';
 import Card from '../components/Card';
 
@@ -67,59 +60,6 @@ const HomeScreen = ({navigation}) => {
           </View>
         </Swiper>
       </View>
-
-      {/* <View style={styles.categoryContainer}>
-        <TouchableOpacity
-          style={styles.categoryBtn}
-          onPress={() =>
-            navigation.navigate('CardListScreen', {title: 'Restaurant'})
-          }>
-          <View style={styles.categoryIcon}>
-            <Ionicons name="ios-restaurant" size={35} color="#FF6347" />
-          </View>
-          <Text style={styles.categoryBtnTxt}>Restaurant</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.categoryBtn}
-          onPress={() =>
-            navigation.navigate('CardListScreen', {title: 'Fastfood Center'})
-          }>
-          <View style={styles.categoryIcon}>
-            <MaterialCommunityIcons
-              name="food-fork-drink"
-              size={35}
-              color="#FF6347"
-            />
-          </View>
-          <Text style={styles.categoryBtnTxt}>Fastfood Center</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
-          <View style={styles.categoryIcon}>
-            <MaterialCommunityIcons name="food" size={35} color="#FF6347" />
-          </View>
-          <Text style={styles.categoryBtnTxt}>Snacks Corner</Text>
-        </TouchableOpacity>
-      </View>
-      <View style={[styles.categoryContainer, {marginTop: 10}]}>
-        <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
-          <View style={styles.categoryIcon}>
-            <Fontisto name="hotel" size={35} color="#FF6347" />
-          </View>
-          <Text style={styles.categoryBtnTxt}>Hotels</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
-          <View style={styles.categoryIcon}>
-            <Ionicons name="md-restaurant" size={35} color="#FF6347" />
-          </View>
-          <Text style={styles.categoryBtnTxt}>Dineouts</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
-          <View style={styles.categoryIcon}>
-            <MaterialIcons name="expand-more" size={35} color="#FF6347" />
-          </View>
-          <Text style={styles.categoryBtnTxt}>Show More</Text>
-        </TouchableOpacity>
-      </View> */}
 
       <View style={styles.cardsWrapper}>
         <Text

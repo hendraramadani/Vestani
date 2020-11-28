@@ -13,12 +13,8 @@ import {
 } from 'react-native';
 import Modal from 'react-native-modal';
 import {SwipeListView} from 'react-native-swipe-list-view';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { AuthContext } from '../components/context';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-
 import InvestasiSekarang from '../model/InvestasiSekarang';
-import {useTheme} from '@react-navigation/native';
 
 const NotificationScreen = ({navigation}) => {
   const [listData, setListData] = useState(
@@ -130,13 +126,9 @@ const NotificationScreen = ({navigation}) => {
                 </View>
               </TouchableOpacity>
             </View>
-     
           </View>
-
         </TouchableHighlight>
       </Animated.View>
-      
-      
     );
   };
 
@@ -178,10 +170,10 @@ const NotificationScreen = ({navigation}) => {
             <TextInput placeholder="Rp100.000" placeholderTextColor="rgba(196, 196, 196, 50)" style={{backgroundColor: 'transparent',marginHorizontal:5}}></TextInput>
           </View>
                 <View style={{flexDirection:'row', justifyContent:'space-between',margin:20}}>
-                  <TouchableOpacity onPress={toggleModal} style={{backgroundColor:'#3A915A', borderRadius: 5, height: 30, width: 90,marginHorizontal:20}}>
+                  <TouchableOpacity onPress={toggleModal} style={{justifyContent:'center',backgroundColor:'#3A915A', borderRadius: 5, height: 35, width: 90,marginHorizontal:20}}>
                       <Text style={{color:'#fff', fontWeight:'bold', textAlign: 'center'}}>Kembali</Text>
                   </TouchableOpacity>
-                  <TouchableOpacity onPress={toggleModal} style={{backgroundColor:'#3A915A', borderRadius: 5, height: 30, width: 90,marginHorizontal:20}}>
+                  <TouchableOpacity onPress={toggleModal} style={{justifyContent:'center',backgroundColor:'#3A915A', borderRadius: 5, height: 35, width: 90,marginHorizontal:20}}>
                       <Text style={{color:'#fff', fontWeight:'bold', textAlign: 'center'}}>Konfirmasi</Text>
                   </TouchableOpacity>
                 </View>
@@ -228,9 +220,6 @@ const styles = StyleSheet.create({
   tabcontainer: {
     flex: 1,
     flexDirection: 'row',
-    // alignItems: 'center',
-    // justifyContent: 'center',
-    
   },
   buttonContainer: {
       flex: 1,

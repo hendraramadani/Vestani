@@ -4,7 +4,6 @@ import {
   Text,
   StyleSheet,
   Animated,
-  Button,
   Image,
   TouchableHighlight,
   TouchableOpacity,
@@ -12,10 +11,7 @@ import {
 } from 'react-native';
 
 import {SwipeListView} from 'react-native-swipe-list-view';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { AuthContext } from '../components/context';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-
 import InvestasiSekarang from '../model/InvestasiSekarang';
 
 const NotificationScreen = ({navigation}) => {
@@ -99,14 +95,13 @@ const NotificationScreen = ({navigation}) => {
               </View>
 
               <View style={{flexDirection:'row', justifyContent:'space-between'}}>
-                  <Text style={{fontSize: 10}}>Selesai</Text>
+                  <Text style={{fontSize: 13, fontWeight:'bold'}}>Selesai</Text>
                   <Text style={{fontSize: 10}}>Keuntungan</Text>
               </View>
               <View style={{flexDirection:'row', justifyContent:'flex-end'}}>
                 {/* <Text style={{fontSize: 10, fontWeight: 'bold', color: '#3A915A'}}>{data.item.hitunganmundur}</Text> */}
                 <Text style={{fontSize: 10, fontWeight: 'bold', color: '#fff',backgroundColor:'#3A915A'}}> {data.item.keuntungan} </Text>
-            </View>
-            
+            </View>           
             </View>
 
             <View style={{flexDirection:'row',width:'15%'}}>
@@ -117,10 +112,8 @@ const NotificationScreen = ({navigation}) => {
                   </Text>
                 </View>
               </TouchableOpacity>
-            </View>
-     
+            </View>     
           </View>
-
         </TouchableHighlight>
       </Animated.View>
     );
@@ -137,91 +130,11 @@ const NotificationScreen = ({navigation}) => {
     );
   };
 
-
-  // Ini untuk state tab
-  // const state = {
-  //   active: 0,
-  //   xTabOne: 0,
-  //   xTabTwo: 0,
-  //   translateX: new Animated.Value(0)
-  // }
-  
-  // let {xTabOne, xTabTwo, translateX, active} = state;
-  // const handleSlide = type => {
-  //   let {active, xTabOne, xTabTwo, translateX} = state;
-  //   Animated.spring(translateX, {
-  //     toValue: type,
-  //     duration: 100,
-  //     useNativeDriver: true
-  //   }).start()
-  // }
   
   return (
     <View style={styles.container}>
       <StatusBar barStyle="dark-content"/>
-      {/* <StatusBar backgroundColor="#FF6347" barStyle="light-content"/> */}
       <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
-      {/* <View style={{width: '90%', marginLeft: 'auto', marginRight: 'auto'}}>
-              <View 
-                style={{
-                  flexDirection: 'row', 
-                  marginTop: 5, 
-                  marginBottom: 10,
-                  height: 36,
-                  position: 'relative'
-                }}>
-                <Animated.View
-                  style={{
-                    position: 'absolute',
-                    width: '50%',
-                    height: '100%',
-                    top: 0,
-                    left: 0,
-                    backgroundColor: '#255004',
-                    borderRadius: 4,
-                    transform: [{
-                      translateX
-                    }]
-                  }}
-                >
-                </Animated.View>
-                <TouchableOpacity
-                    style={{
-                      flex: 1, 
-                      justifyContent: 'center', 
-                      alignItems: 'center',
-                      borderWidth: 1,
-                      borderColor: '#255004',
-                      borderRadius: 4,
-                      borderRightWidth: 0,
-                      borderTopRightRadius: 0,
-                      borderBottomRightRadius: 0
-                    }}
-                    onLayout = {event => state['xTabOne'] = event.nativeEvent.layout.x}
-                    onPress = {() => state['active'] = 0, () => handleSlide(xTabOne)}
-                  >
-                      <Text style={{color: active === 0 ? '#FFFFFF' : '#255004'}}>Sekarang</Text>
-                  </TouchableOpacity>
-                <TouchableOpacity
-                 style={{
-                   flex: 1, 
-                   justifyContent: 'center', 
-                   alignItems: 'center',
-                   borderWidth: 1,
-                   borderColor: '#255004',
-                   borderRadius: 4,
-                   borderLeftWidth: 0,
-                   borderTopLeftRadius: 0,
-                   borderBottomLeftRadius: 0
-                  }}
-                  
-                  onLayout = {event => state['xTabTwo'] = event.nativeEvent.layout.x}
-                  onPress = {() => state['active'] = 1, () => handleSlide(xTabTwo)}
-                >
-                    <Text style={{color: active === 1 ? '#FFFFFF' : '#255004'}}>Selesai</Text>
-                </TouchableOpacity>
-              </View>
-            </View> */}
       </View>
       <SwipeListView
         data={listData}
@@ -263,9 +176,6 @@ const styles = StyleSheet.create({
   tabcontainer: {
     flex: 1,
     flexDirection: 'row',
-    // alignItems: 'center',
-    // justifyContent: 'center',
-    
   },
   buttonContainer: {
       flex: 1,

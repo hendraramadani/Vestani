@@ -144,7 +144,6 @@ const NotificationStackScreen = ({navigation}) => {
         headerStyle: {
           backgroundColor: '#fff',
         },
-        // headerTintColor: '#fff',
         headerTitleStyle: {
           fontWeight: 'bold',
         },
@@ -168,7 +167,6 @@ const NotificationStackScreenSelesai = ({navigation}) => {
         headerStyle: {
           backgroundColor: '#fff',
         },
-        // headerTintColor: '#fff',
         headerTitleStyle: {
           fontWeight: 'bold',
         },
